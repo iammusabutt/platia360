@@ -1,0 +1,62 @@
+:root {
+    --primary-background: #1a2e33;
+    --secondary-background: #213338;
+    --btn-green: #007E8C;
+    --input-background: #2d4952;
+    --white: #ffffff;
+}
+.navbar-expand-lg {
+    display: none;
+}
+body {
+    background: #005D99;
+    background: linear-gradient(90deg, rgba(0, 93, 153, 1) 0%, rgba(18, 139, 203, 1) 20%, rgba(36, 160, 209, 1) 35%, rgba(55, 173, 189, 1) 50%, rgba(68, 182, 175, 1) 65%, rgba(83, 192, 159, 1) 80%, rgba(109, 209, 131, 1) 100%);
+}
+.for-login .page-card, .for-forgot .page-card, .for-login-with-email-link .page-card, .for-signup .page-card, .for-email-login .page-card {
+    border-radius: 0 !important;
+    border: 0 !important;
+}
+.page-card-head {
+    max-width: 400px;
+    background: var(--white);
+    margin-top: 5em !important;
+}
+.btn.btn-primary {
+    background-color: var(--btn-green);
+}
+.btn.btn-default, .btn.btn-primary {
+    padding: 12px !important;
+}
+.btn.btn-primary:active {
+    color: #fff;
+    background-color: var(--btn-green) !important;
+    border-color: var(--btn-green);
+}
+.page-card .page-card-body input {
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: .5rem;
+    padding: 0 2rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition: border-color .3s 
+cubic-bezier(.25, .01, .25, 1) 0s, color .3s 
+cubic-bezier(.25, .01, .25, 1) 0s, background .2s 
+cubic-bezier(.25, .01, .25, 1) 0s;
+}
+.for-login .page-card .page-card-body .field-icon, .for-forgot .page-card .page-card-body .field-icon, .for-login-with-email-link .page-card .page-card-body .field-icon, .for-signup .page-card .page-card-body .field-icon, .for-email-login .page-card .page-card-body .field-icon {
+    top: 15px !important;
+}
+.for-login .page-card .page-card-body .email-field .toggle-password, .for-login .page-card .page-card-body .password-field .toggle-password, .for-forgot .page-card .page-card-body .email-field .toggle-password, .for-forgot .page-card .page-card-body .password-field .toggle-password, .for-login-with-email-link .page-card .page-card-body .email-field .toggle-password, .for-login-with-email-link .page-card .page-card-body .password-field .toggle-password, .for-signup .page-card .page-card-body .email-field .toggle-password, .for-signup .page-card .page-card-body .password-field .toggle-password, .for-email-login .page-card .page-card-body .email-field .toggle-password, .for-email-login .page-card .page-card-body .password-field .toggle-password {
+    top: 15px !important;
+}
+@media (max-width: 768px) {
+    #page-stripe_checkout .page-content-wrapper .page_content .stripe {
+        margin-left: 120px !important;
+    }
+}
+@media (max-width: 425px) {
+    #page-stripe_checkout .page-content-wrapper .page_content .stripe {
+        margin: 0 auto !important;
+    }
+}

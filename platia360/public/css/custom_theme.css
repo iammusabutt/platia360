@@ -1,0 +1,158 @@
+:root {
+    --navbar-bg: #1a2e33;
+    --primary-background: #1a2e33;
+    --secondary-background: #213338;
+    --btn-primary: #007E8C;
+    --input-background: #2d4952;
+}
+[data-page-route=Workspaces] .layout-main .layout-side-section {
+    background-color: var(--primary-background);
+}
+[data-page-route=Workspaces] .layout-main-section-wrapper {
+    margin-top: 0;
+}
+.text-body, .text-muted, div#driver-popover-item .driver-popover-footer button.driver-close-btn {
+    color: #afafaf !important;
+}
+.standard-sidebar .standard-sidebar-item.selected, .desk-sidebar .standard-sidebar-item.selected, .search-dialog .search-results .search-sidebar .standard-sidebar-item.selected {
+    background-color: var(--btn-primary);
+}
+.standard-sidebar .standard-sidebar-item>a, .desk-sidebar .standard-sidebar-item>a, .search-dialog .search-results .search-sidebar .standard-sidebar-item>a {
+    color: var(--white);
+}
+.standard-sidebar .standard-sidebar-item svg, .desk-sidebar .standard-sidebar-item svg, .search-dialog .search-results .search-sidebar .standard-sidebar-item svg {
+    filter: brightness(0) invert(1);
+}
+.standard-sidebar .standard-sidebar-item:hover, .desk-sidebar .standard-sidebar-item:hover, .search-dialog .search-results .search-sidebar .standard-sidebar-item:hover {
+    background-color: #007e8c;
+    text-decoration: none;
+}
+.standard-sidebar .standard-sidebar-item:focus-within, .desk-sidebar .standard-sidebar-item:focus-within, .search-dialog .search-results .search-sidebar .standard-sidebar-item:focus-within {
+    background-color: var(--btn-primary);
+}
+.layout-side-section {
+    background-color: var(--primary-background);
+}
+.layout-main-section-wrapper {
+    margin-top: 5px;
+}
+.list-sidebar .list-filters input:not([data-fieldtype=Check]) {
+    background: var(--input-background);
+}
+.list-sidebar .list-sidebar-button {
+    color: #b3b3b3;
+    background-color: var(--input-background);
+}
+.list-sidebar .list-sidebar-button:hover {
+    text-decoration: none;
+    background-color: var(--btn-primary);
+    color: var(--white);
+}
+.layout-side-section .sidebar-label {
+    color: #ffffff;
+}
+.desk-sidebar .standard-sidebar-label span {
+    color: var(--white);
+}
+.sidebar-section a {
+    color: var(--white);
+}
+.navbar .navbar-nav li.disabled a {
+    color: #ffffff;
+}
+#navbar-breadcrumbs li.disabled a {
+    color: var(--white);
+    pointer-events: none;
+}
+#navbar-breadcrumbs a:before {
+    filter: brightness(0) invert(1);
+}
+.navbar .navbar-nav .btn-reset.nav-link, .navbar ul#navbar-breadcrumbs li a {
+    color: var(--white);
+}
+.navbar .navbar-nav li dropdown-menu a {
+    color: var(--text-color);
+}
+
+.navbar {
+    border-bottom: 1px solid #2d4a52;
+    padding: 0 15px;
+}
+.navbar .vertical-bar {
+    border-right: 1px solid #2d4a52;
+}
+.search-bar .awesomplete input {
+    background-color: var(--input-background);
+    color: var(--white);
+}
+.search-bar .awesomplete input:focus {
+    background-color: var(--input-background);
+    color: var(--white);
+}
+.page-head {
+    background-color: var(--primary-background);
+    margin: 0;
+}
+.page-title .title-area .title-text {
+    color: var(--white);
+}
+.es-icon {
+    fill: var(--white);
+    stroke: var(--white);
+}
+.btn-primary:not(:disabled):not(.disabled):active, div#driver-popover-item .driver-popover-footer button.driver-next-btn:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, div#driver-popover-item .driver-popover-footer button.driver-next-btn:not(:disabled):not(.disabled).active, .show>.btn-primary.dropdown-toggle, div#driver-popover-item .driver-popover-footer .show>button.dropdown-toggle.driver-next-btn {
+    color: #fff;
+    background-color: var(--input-background) !important;
+    border-color: var(--input-background) !important;
+}
+.btn.btn-default:hover, div#driver-popover-item .driver-popover-footer button.btn-default:hover, .btn.btn-default:active, div#driver-popover-item .driver-popover-footer button.btn-default:active {
+    background: var(--btn-primary);
+    color: var(--white);
+}
+.btn.btn-default, div#driver-popover-item .driver-popover-footer button.btn-default {
+    background-color: var(--input-background);
+    color: var(--white);
+}
+.icon, .es-icon {
+    filter: brightness(0) invert(1);
+}
+.add-assignment-btn:hover, .add-attachment-btn:hover, .add-review-btn:hover, .shares:hover, .add-tags-btn:hover, .share-doc-btn:hover, .followed-by:hover {
+    background-color: var(--btn-primary);
+}
+.form-follow, .form-follow:hover, .comments-count, .like-count {
+    color: var(--white);
+}
+.btn-default:active {
+    background-color: var(--input-background) !important;
+    color: var(--white) !important;
+}
+.workspace-sidebar-skeleton .sidebar-box {
+  background-color: var(--input-background);
+}
+.layout-side-section .form-sidebar ul.text-muted li a {
+    color: #afafaf;
+
+}
+.layout-side-section .checkbox .label-area {
+    color: var(--white);
+}
+.layout-main-section-wrapper .filter-chart .icon, .layout-main-section-wrapper .chart-actions .icon, .sidebar-item-control .es-icon, .sidebar-item-control .setting-btn .es-icon  {
+    filter: inherit;
+}
+.layout-side-section .form-sidebar .sidebar-menu li .ellipsis, .layout-side-section .form-sidebar .sidebar-menu li .ellipsis span {
+    color: var(--white);
+}
+.print-format-builder-sidebar .print-format-builder-sidebar-fields .sidebar-field {
+    color: var(--white);
+}
+.print-format-builder-sidebar .print-format-builder-sidebar-fields .sidebar-custom-field {
+    background-color: var(--btn-primary);
+}
+.layout-main-section .icon, .es-icon {
+    filter: inherit;
+}
+@media (max-width: 991px) {
+    .layout-side-section .overlay-sidebar {
+        background: var(--primary-background);
+    }
+}

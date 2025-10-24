@@ -7,7 +7,10 @@ app_license = "mit"
 
 # Apps
 # ------------------
-
+csrf_exempted_methods = [
+    "platia360.api.auth.controller.sso_login",
+    "platia360.api.auth.jwt.middleware.identity",
+]
 # required_apps = []
 
 # Each item in the list will be shown as an app in the apps page
@@ -26,10 +29,19 @@ app_license = "mit"
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/platia360/css/platia360.css"
+app_include_css = "/assets/platia360/css/custom_theme.css"
+
 # app_include_js = "/assets/platia360/js/platia360.js"
+app_include_js = [
+    "/assets/platia360/js/desk/desk_fullwidth.js",
+    "/assets/platia360/js/settings_dropdown.js"
+]
 
 # include js, css files in header of web template
 # web_include_css = "/assets/platia360/css/platia360.css"
+web_include_css = [
+    "/assets/platia360/css/custom_website.css"
+]
 # web_include_js = "/assets/platia360/js/platia360.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -139,12 +151,16 @@ app_license = "mit"
 
 # doc_events = {
 # 	"*": {
-# 		"on_update": "method",
+# 		"before_request": "jwt_auth.middleware.jwt_authentication",
 # 		"on_cancel": "method",
 # 		"on_trash": "method"
 # 	}
 # }
-
+doc_events = {
+    "*": {
+        "before_request": "platia360.api.auth.jwt.middleware.identity"
+    }
+}
 # Scheduled Tasks
 # ---------------
 
