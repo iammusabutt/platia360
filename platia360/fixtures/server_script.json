@@ -1,0 +1,40 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "After Submit",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2025-10-22 02:59:17.087918",
+  "module": null,
+  "name": "Autopaymentrequest1",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Sales Invoice",
+  "script": "if doc.outstanding_amount > 0:\r\n    existing = frappe.db.exists(\"Payment Request\", {\r\n        \"reference_doctype\": \"Sales Invoice\",\r\n        \"reference_name\": doc.name\r\n    })\r\n\r\n    if not existing:\r\n        # Hardcoded Payment Gateway Account\r\n        gateway_account = \"Stripe - OMR\"\r\n\r\n        # Create Payment Request\r\n        pr = frappe.get_doc({\r\n            \"doctype\": \"Payment Request\",\r\n            \"payment_gateway\": \"Stripe\",\r\n            \"payment_gateway_account\": gateway_account,\r\n            \"party_type\": \"Customer\",\r\n            \"party\": doc.customer,\r\n            \"reference_doctype\": \"Sales Invoice\",\r\n            \"reference_name\": doc.name,\r\n            \"grand_total\": doc.grand_total,\r\n            \"currency\": doc.currency,\r\n            \"message\": f\"Please pay Invoice {doc.name}\"\r\n        })\r\n        pr.insert(ignore_permissions=True)\r\n        pr.submit()\r\n\r\n        # Get customer email\r\n        email = frappe.db.get_value(\"Customer\", doc.customer, \"email_id\")\r\n        if not email:\r\n            frappe.throw(\"Customer does not have an email address set.\")\r\n\r\n        # Send email\r\n        frappe.sendmail(\r\n            recipients=[email],\r\n            subject=f\"Payment Request for Invoice {doc.name}\",\r\n            message=f\"\"\"\r\n                Dear {doc.customer_name or doc.customer},<br><br>\r\n                Please pay your invoice <strong>{doc.name}</strong> by clicking the button below:<br><br>\r\n                <a href=\"{pr.payment_url}\" style=\"padding:10px 15px; background:#007bff; color:#fff; text-decoration:none; border-radius:5px;\">\r\n                    Pay Now with Stripe\r\n                </a><br><br>\r\n                Thank you!\r\n            \"\"\",\r\n            reference_doctype=\"Sales Invoice\",\r\n            reference_name=doc.name\r\n        )\r\n",
+  "script_type": "DocType Event"
+ },
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 1,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Insert",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2025-11-10 11:01:29.092548",
+  "module": "Support",
+  "name": "jobs and ppms",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Work Plan",
+  "script": "if doc.ppm_template and not doc.ppm_checklist:\r\n    template = frappe.get_doc(\"PPM Checklist Template\", doc.ppm_template)\r\n    for item in template.checklist_items:\r\n        doc.append(\"ppm_checklist\", {\r\n            \"task\": item.task,\r\n            \"is_mandatory\": item.is_mandatory\r\n        })",
+  "script_type": "DocType Event"
+ }
+]

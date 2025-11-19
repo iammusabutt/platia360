@@ -157,10 +157,25 @@ web_include_css = [
 # 	}
 # }
 doc_events = {
-    "*": {
-        "before_request": "platia360.api.auth.jwt.middleware.identity"
+    "Stock Entry": {
+        "on_submit": "platia360.overrides.stock_entry.link_to_work_plan"
     }
 }
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["dt", "in", ["Stock Entry", "Workflow State", "Issue"]]
+        ]
+    },
+    "Client Script",
+    "Server Script",
+    "Role",
+    "Role Profile",
+]
+
+
 # Scheduled Tasks
 # ---------------
 
@@ -197,9 +212,10 @@ doc_events = {
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
-# override_doctype_dashboards = {
-# 	"Task": "platia360.task.get_dashboard_data"
-# }
+
+override_doctype_dashboards = {
+	"Work Plan": "platia360.overrides.dashboard_overrides.get_dashboard_for_work_plan",
+}
 
 # exempt linked doctypes from being automatically cancelled
 #

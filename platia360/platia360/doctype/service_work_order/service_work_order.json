@@ -1,0 +1,199 @@
+{
+ "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-10-28 23:54:54.236461",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ldqr",
+  "amended_from",
+  "naming_series",
+  "wo_customer",
+  "wostatus",
+  "wosr",
+  "wotype",
+  "column_break_jjrs",
+  "service_work_order_template",
+  "wo_createdate",
+  "started",
+  "due_date",
+  "wo_feedback",
+  "wo_opsrating",
+  "jobs_section",
+  "jobs_html"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "section_break_ldqr",
+   "fieldtype": "Section Break",
+   "label": "Work Order"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Work Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "reqd": 1
+  },
+  {
+   "fieldname": "wo_customer",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "wostatus",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nIn Progress\nCompleted\nCancelled\nApproved\nClosed",
+   "reqd": 1,
+   "sort_options": 1
+  },
+  {
+   "fieldname": "wotype",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Preventive\nReactive\nCorrective\nPredictive\nInspection\nInstallation\nModification\nCalibration\nRelocation\nDecommissioning\nAdministrative\nTraining",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "column_break_jjrs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wo_createdate",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Created"
+  },
+  {
+   "fieldname": "started",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Started"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "in_filter": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "wosr",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Service Request",
+   "options": "Issue"
+  },
+  {
+   "bold": 1,
+   "fieldname": "wo_feedback",
+   "fieldtype": "Section Break",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "wo_opsrating",
+   "fieldtype": "Rating",
+   "label": "Ops Rating"
+  },
+  {
+   "fieldname": "jobs_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "jobs_html",
+   "fieldtype": "HTML",
+   "label": "Jobs List"
+  },
+  {
+   "fieldname": "service_work_order_template",
+   "fieldtype": "Link",
+   "label": "Service Work Order Template",
+   "options": "Service Work Order Template"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-14 12:04:21.904369",
+ "modified_by": "Administrator",
+ "module": "Platia360",
+ "name": "Service Work Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Support Team",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Green",
+   "title": "On Track"
+  },
+  {
+   "color": "Orange",
+   "title": "Off Track"
+  }
+ ],
+ "track_changes": 1,
+ "track_views": 1
+}

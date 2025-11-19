@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_events_in_timeline": 1,
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-11-07 17:39:42.485485",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_v7h6",
+  "naming_series",
+  "job_title",
+  "job_agent",
+  "job_skillcode",
+  "column_break_fbce",
+  "amended_from",
+  "sjob_status",
+  "jobwo",
+  "section_break_wxbp",
+  "ppm_template",
+  "ppm_items",
+  "section_break_bnny",
+  "required_items",
+  "connections_tab",
+  "stock_entry"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_v7h6",
+   "fieldtype": "Section Break",
+   "label": "Job"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "print_hide": 1,
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Work Plan",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "jobwo",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Work Order",
+   "options": "Service Work Order"
+  },
+  {
+   "fieldname": "job_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Job Title"
+  },
+  {
+   "fieldname": "job_agent",
+   "fieldtype": "Link",
+   "label": "Job Agent",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "job_skillcode",
+   "fieldtype": "Data",
+   "label": "Skill Code"
+  },
+  {
+   "fieldname": "sjob_status",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Job Status",
+   "options": "Draft\nPending Approval\nSubmitted\nDelivered\nApproved\nSigned\nClosed",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "section_break_wxbp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ppm_template",
+   "fieldtype": "Link",
+   "label": "PPM Checklist Template",
+   "options": "PPM Checklist Template"
+  },
+  {
+   "fieldname": "ppm_items",
+   "fieldtype": "Table",
+   "label": "PPM Items",
+   "options": "Work Plan Checklist Item"
+  },
+  {
+   "fieldname": "column_break_fbce",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_bnny",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "required_items",
+   "fieldtype": "Table",
+   "label": "Required Items",
+   "no_copy": 1,
+   "options": "Work Plan Item",
+   "print_hide": 1
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "stock_entry",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Stock Entry",
+   "options": "Stock Entry",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-18 14:36:07.954868",
+ "modified_by": "Administrator",
+ "module": "Platia360",
+ "name": "Work Plan",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Support Team",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

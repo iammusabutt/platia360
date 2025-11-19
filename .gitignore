@@ -5,3 +5,7 @@
 tags
 node_modules
 __pycache__
+dist/               # built JS/CSS assets
+.env                # environment variables, secrets
+site_config.json    # sensitive site config
+sites/*             # site-specific folders (databases, uploaded files)
