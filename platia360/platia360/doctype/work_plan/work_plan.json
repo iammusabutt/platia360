@@ -11,25 +11,32 @@
   "section_break_v7h6",
   "naming_series",
   "job_title",
-  "job_agent",
   "job_skillcode",
-  "column_break_fbce",
-  "amended_from",
   "sjob_status",
+  "column_break_fbce",
   "jobwo",
+  "job_agent",
+  "wp_location",
+  "wp_asset",
+  "column_break_bpxn",
+  "target_start_date",
+  "target_end_date",
+  "column_break_hskg",
+  "schedule_start_date",
+  "schedule_end_date",
   "section_break_wxbp",
   "ppm_template",
   "ppm_items",
   "section_break_bnny",
   "required_items",
-  "connections_tab",
-  "stock_entry"
+  "other_info_section",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "section_break_v7h6",
    "fieldtype": "Section Break",
-   "label": "Job"
+   "label": "Work Plan Header"
   },
   {
    "fieldname": "naming_series",
@@ -91,18 +98,19 @@
   },
   {
    "fieldname": "section_break_wxbp",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Checklist"
   },
   {
    "fieldname": "ppm_template",
    "fieldtype": "Link",
-   "label": "PPM Checklist Template",
+   "label": "Override from PPM",
    "options": "PPM Checklist Template"
   },
   {
    "fieldname": "ppm_items",
    "fieldtype": "Table",
-   "label": "PPM Items",
+   "label": "Steps",
    "options": "Work Plan Checklist Item"
   },
   {
@@ -111,37 +119,67 @@
   },
   {
    "fieldname": "section_break_bnny",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Required Items"
   },
   {
    "fieldname": "required_items",
    "fieldtype": "Table",
-   "label": "Required Items",
+   "label": "Items",
    "no_copy": 1,
    "options": "Work Plan Item",
    "print_hide": 1
   },
   {
-   "fieldname": "connections_tab",
-   "fieldtype": "Tab Break",
-   "label": "Connections",
-   "show_dashboard": 1
+   "fieldname": "column_break_bpxn",
+   "fieldtype": "Column Break"
   },
   {
-   "allow_on_submit": 1,
-   "fieldname": "stock_entry",
+   "fieldname": "target_start_date",
+   "fieldtype": "Date",
+   "label": "Target Start Date"
+  },
+  {
+   "fieldname": "target_end_date",
+   "fieldtype": "Date",
+   "label": "Target End Date"
+  },
+  {
+   "fieldname": "column_break_hskg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "schedule_start_date",
+   "fieldtype": "Date",
+   "label": "Schedule Start Date"
+  },
+  {
+   "fieldname": "schedule_end_date",
+   "fieldtype": "Date",
+   "label": "Schedule End Date"
+  },
+  {
+   "fieldname": "other_info_section",
+   "fieldtype": "Section Break",
+   "label": "Other Info"
+  },
+  {
+   "fieldname": "wp_location",
    "fieldtype": "Link",
-   "ignore_user_permissions": 1,
-   "label": "Stock Entry",
-   "options": "Stock Entry",
-   "read_only": 1
+   "label": "Location",
+   "options": "Location WS"
+  },
+  {
+   "fieldname": "wp_asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "WS Assets"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_calendar_and_gantt": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2025-11-18 14:36:07.954868",
+ "modified": "2025-12-09 15:49:28.561436",
  "modified_by": "Administrator",
  "module": "Platia360",
  "name": "Work Plan",
@@ -158,7 +196,6 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
-   "submit": 1,
    "write": 1
   },
   {
@@ -171,14 +208,23 @@
    "report": 1,
    "role": "Support Team",
    "share": 1,
-   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Demo User",
+   "share": 1,
    "write": 1
   }
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "track_changes": 1,
- "track_seen": 1,
- "track_views": 1
+ "track_changes": 1
 }

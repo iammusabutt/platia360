@@ -1,0 +1,25 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "chart": "Project Summary WS",
+   "width": "Full"
+  },
+  {
+   "chart": "Project Stock",
+   "width": "Full"
+  }
+ ],
+ "creation": "2025-11-25 20:12:15.361448",
+ "dashboard_name": "Project WS",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 0,
+ "is_standard": 1,
+ "modified": "2025-11-25 20:51:11.830679",
+ "modified_by": "Administrator",
+ "module": "Platia360",
+ "name": "Project WS",
+ "owner": "Administrator"
+}

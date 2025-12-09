@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:wssubcat_name",
+ "creation": "2025-11-27 16:08:21.691592",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "wssubcat_name",
+  "wsl3category_parent",
+  "wsl1category_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "wssubcat_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sub Category Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "wsl3category_parent",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Parent Category",
+   "options": "WS Assets Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "wsl1category_parent",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Master Category",
+   "options": "Asset Category",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-12-08 23:04:13.872215",
+ "modified_by": "Administrator",
+ "module": "Platia360",
+ "name": "WS Asset Subcategory",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Support Team",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -10,8 +10,17 @@
   "section_break_pvka",
   "amended_from",
   "ppm_name",
-  "asset_type",
   "descrtiption",
+  "column_break_nfxq",
+  "ppm_freq",
+  "assets_section",
+  "asset_type",
+  "word_order_defaults_section",
+  "ppm_wodefault",
+  "wodefault_priority",
+  "status_first_step",
+  "column_break_ocfn",
+  "wodefault_sla",
   "checklist_items_section",
   "ppm_items"
  ],
@@ -35,17 +44,18 @@
    "fieldname": "ppm_name",
    "fieldtype": "Data",
    "label": "Name",
+   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "asset_type",
-   "fieldtype": "Select",
+   "fieldtype": "Link",
    "in_filter": 1,
    "in_list_view": 1,
    "in_preview": 1,
    "in_standard_filter": 1,
-   "label": "Asset Type",
-   "options": "Machinery\nType 2\nType 3",
+   "label": "Asset SubCategory",
+   "options": "WS Asset Subcategory",
    "sort_options": 1
   },
   {
@@ -56,7 +66,7 @@
   {
    "fieldname": "checklist_items_section",
    "fieldtype": "Section Break",
-   "label": "Checklist Items"
+   "label": "Work Plans Checklist Items"
   },
   {
    "fieldname": "ppm_items",
@@ -65,12 +75,66 @@
    "in_standard_filter": 1,
    "label": "PPM tems",
    "options": "PPM checklist Item"
+  },
+  {
+   "fieldname": "column_break_nfxq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ppm_freq",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "PPM Frequency",
+   "options": "Monthly\nBi-Monthly\nQuarterly\nHalf Yearly\nYearly\n2 Yearly",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "assets_section",
+   "fieldtype": "Section Break",
+   "label": "Assets"
+  },
+  {
+   "fieldname": "word_order_defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Word Order Defaults"
+  },
+  {
+   "fieldname": "wodefault_priority",
+   "fieldtype": "Select",
+   "label": "Priority",
+   "options": "P1 - Critical\nP2 - High\nP3 - Medium\nP4 - Low\nP5 - Information"
+  },
+  {
+   "fieldname": "status_first_step",
+   "fieldtype": "Select",
+   "label": "Status First Step",
+   "options": "Waiting On Approval\nApproved\nWaiting On Schedule\nWaiting On Material\nIn Progress\nHold\nCompleted\nClosed\nCancelled",
+   "sort_options": 1
+  },
+  {
+   "fieldname": "column_break_ocfn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "wodefault_sla",
+   "fieldtype": "Link",
+   "label": "SLA",
+   "options": "WS Service Level Agreement"
+  },
+  {
+   "fieldname": "ppm_wodefault",
+   "fieldtype": "Link",
+   "label": "Service Work Order Template",
+   "options": "Service Work Order Template"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-14 11:29:17.004701",
+ "modified": "2025-12-05 17:17:49.180205",
  "modified_by": "Administrator",
  "module": "Platia360",
  "name": "PPM Checklist Template",

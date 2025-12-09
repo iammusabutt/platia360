@@ -9,13 +9,16 @@
   "ppm_item_sequence",
   "ppm_item_task",
   "ppm_item_must",
-  "ppm_item_dome",
-  "ppm_item_expected_result",
-  "ppm_item_date",
+  "ppm_item_done",
   "ppm_item_skills",
   "ppm_item_owner",
   "ppm_item_status",
-  "ppm_item_remarks"
+  "ppm_item_expected_result",
+  "image_before",
+  "image_after",
+  "ppm_item_remarks",
+  "ppm_item_date",
+  "ppm_item_enddate"
  ],
  "fields": [
   {
@@ -35,9 +38,9 @@
   {
    "columns": 1,
    "fieldname": "ppm_item_date",
-   "fieldtype": "Date",
+   "fieldtype": "Datetime",
    "in_list_view": 1,
-   "label": "Date"
+   "label": "Actual Start Date"
   },
   {
    "columns": 1,
@@ -63,14 +66,6 @@
   },
   {
    "columns": 1,
-   "default": "0",
-   "fieldname": "ppm_item_dome",
-   "fieldtype": "Check",
-   "in_list_view": 1,
-   "label": "Done"
-  },
-  {
-   "columns": 1,
    "fieldname": "ppm_item_status",
    "fieldtype": "Select",
    "in_list_view": 1,
@@ -80,9 +75,9 @@
   {
    "columns": 1,
    "fieldname": "ppm_item_remarks",
-   "fieldtype": "Small Text",
+   "fieldtype": "Text",
    "in_list_view": 1,
-   "label": "Remarks"
+   "label": "Comments"
   },
   {
    "columns": 1,
@@ -90,12 +85,35 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Owner"
+  },
+  {
+   "columns": 1,
+   "default": "0",
+   "fieldname": "ppm_item_done",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Done"
+  },
+  {
+   "fieldname": "image_before",
+   "fieldtype": "Attach Image",
+   "label": "Image Before"
+  },
+  {
+   "fieldname": "image_after",
+   "fieldtype": "Attach Image",
+   "label": "Image After"
+  },
+  {
+   "fieldname": "ppm_item_enddate",
+   "fieldtype": "Datetime",
+   "label": "Actual End Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-11-14 11:56:35.084998",
+ "modified": "2025-12-09 14:14:53.501580",
  "modified_by": "Administrator",
  "module": "Platia360",
  "name": "Work Plan Checklist Item",

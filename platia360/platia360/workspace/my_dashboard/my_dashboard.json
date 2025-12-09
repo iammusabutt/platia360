@@ -1,0 +1,46 @@
+{
+ "charts": [
+  {
+   "chart_name": "Material Requests",
+   "label": "Material Requests"
+  },
+  {
+   "chart_name": "Warehouse wise Stock Value",
+   "label": "Warehouse wise Stock Value"
+  },
+  {
+   "chart_name": "WS Service Requests",
+   "label": "WS Service Requests"
+  },
+  {
+   "chart_name": "Service Work Orders",
+   "label": "Service Work Orders"
+  }
+ ],
+ "content": "[{\"id\":\"u5rQMMMPU3\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">My Dashboard</span>\",\"col\":12}},{\"id\":\"bwsklkYlPP\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"S9WTA8EhEu\",\"type\":\"chart\",\"data\":{\"chart_name\":\"WS Service Requests\",\"col\":6}},{\"id\":\"zW12G6ricG\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Material Requests\",\"col\":6}},{\"id\":\"1jI1ponMkG\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Warehouse wise Stock Value\",\"col\":6}},{\"id\":\"QvW2IaYOhh\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Service Work Orders\",\"col\":6}}]",
+ "creation": "2025-12-09 03:14:36.472563",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "users",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "My Dashboard",
+ "links": [],
+ "modified": "2025-12-09 04:44:40.441524",
+ "modified_by": "Administrator",
+ "module": "Platia360",
+ "name": "My Dashboard",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "My Dashboard"
+}

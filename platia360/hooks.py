@@ -29,12 +29,20 @@ csrf_exempted_methods = [
 
 # include js, css files in header of desk.html
 # app_include_css = "/assets/platia360/css/platia360.css"
-app_include_css = "/assets/platia360/css/custom_theme.css"
+#app_include_css = [
+#    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css",
+#    "/assets/platia360/css/custom_theme.css",
+#    "/assets/platia360/css/custom_sidebar.css"
+#]
+app_include_css = [
+    "/assets/platia360/css/custom_theme.css"
+]
 
 # app_include_js = "/assets/platia360/js/platia360.js"
 app_include_js = [
     "/assets/platia360/js/desk/desk_fullwidth.js",
-    "/assets/platia360/js/settings_dropdown.js"
+    "/assets/platia360/js/settings_dropdown.js",
+    "/assets/platia360/js/frappe/ui/custom_sidebar.js",
 ]
 
 # include js, css files in header of web template

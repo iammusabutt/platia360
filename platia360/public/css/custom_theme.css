@@ -11,6 +11,12 @@
 [data-page-route=Workspaces] .layout-main-section-wrapper {
     margin-top: 0;
 }
+[data-page-route=Workspaces] .sidebar-item-container {
+    margin-left: 0;
+}
+[data-page-route=Workspaces] .standard-sidebar-item {
+    padding: 8px 12px;
+}
 .text-body, .text-muted, div#driver-popover-item .driver-popover-footer button.driver-close-btn {
     color: #afafaf !important;
 }
@@ -18,10 +24,13 @@
     background-color: var(--btn-primary);
 }
 .standard-sidebar .standard-sidebar-item>a, .desk-sidebar .standard-sidebar-item>a, .search-dialog .search-results .search-sidebar .standard-sidebar-item>a {
-    color: var(--white);
+    font-weight: 600;
+    color: #c8faff;
 }
 .standard-sidebar .standard-sidebar-item svg, .desk-sidebar .standard-sidebar-item svg, .search-dialog .search-results .search-sidebar .standard-sidebar-item svg {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) saturate(100%) invert(87%) sepia(27%) saturate(5374%) hue-rotate(324deg) brightness(93%) contrast(108%);
+    width: 25px;
+    height: 25px;
 }
 .standard-sidebar .standard-sidebar-item:hover, .desk-sidebar .standard-sidebar-item:hover, .search-dialog .search-results .search-sidebar .standard-sidebar-item:hover {
     background-color: #007e8c;
